@@ -1,45 +1,415 @@
-<html class="">
+<!DOCTYPE html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://unpkg.com/htmx.org@1.9.4/dist/htmx.min.js"></script>
+    <title>Ruthvik Venkatesan | Portfolio</title>
+    <style>
+        /* Base Reset & Typography */
+        body {
+            font-family: 'Times New Roman', Times, serif;
+            background-color: #ffffff;
+            color: #111;
+            line-height: 1.5;
+            margin: 0;
+            padding: 20px;
+        }
+
+        /* Layout: "Middle 40%" logic with a safeguard for mobile */
+        .container {
+            width: 40%;             /* Stays in the middle on big screens */
+            min-width: 350px;       /* Ensures it doesn't get too squished on phones */
+            max-width: 800px;       /* Cap it so it doesn't get too wide */
+            margin: 0 auto;         /* Centers the container */
+            padding-bottom: 50px;   /* Extra space at the bottom */
+        }
+
+        /* Typography Styling */
+        h1, h2, h3 {
+            font-weight: bold;
+            color: #000;
+            margin-bottom: 5px;
+        }
+
+        h1 {
+            font-size: 28px;
+            text-align: center;
+            margin-top: 10px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        h2 {
+            font-size: 18px;
+            border-bottom: 1px solid #000;
+            padding-bottom: 5px;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+        }
+
+        h3 {
+            font-size: 16px;
+            margin-top: 15px;
+        }
+
+        p {
+            font-size: 14px;
+            margin-bottom: 8px;
+            color: #333;
+        }
+
+        a {
+            color: #000;
+            text-decoration: underline;
+        }
+
+        ul {
+            padding-left: 20px;
+            margin-top: 5px;
+            font-size: 14px;
+        }
+
+        li {
+            margin-bottom: 4px;
+        }
+
+        /* Image Styling */
+        .profile-pic {
+            display: block;
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 50%; /* Makes it a circle */
+            margin: 0 auto 20px auto;
+            border: 1px solid #ccc;
+            background-color: #f0f0f0; /* Placeholder color */
+        }
+
+        .logo-img {
+            float: left;
+            width: 50px;
+            height: 50px;
+            object-fit: contain;
+            margin-right: 15px;
+            border: 1px solid #eee;
+            background-color: #fff;
+        }
+
+        .project-img {
+            display: block;
+            width: 100%;
+            height: auto;
+            border: 1px solid #ddd;
+            margin-bottom: 10px;
+            margin-top: 10px;
+            background-color: #f9f9f9;
+        }
+
+        /* Utility classes */
+        .header-contact {
+            text-align: center;
+            font-size: 14px;
+            margin-bottom: 20px;
+        }
+
+        .job-header {
+            overflow: hidden; /* Clears the float for the logo */
+            margin-bottom: 10px;
+        }
+
+        .dates {
+            float: right;
+            font-style: italic;
+            font-size: 13px;
+            color: #555;
+        }
+
+        .sub-title {
+            font-style: italic;
+            font-size: 14px;
+        }
+
+        /* Helper for user inserted media to ensure it stays within bounds */
+        img, video {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 10px 0;
+        }
+
+        /* ADDRESS BOOK SPECIFIC STYLES */
+        .address-book-grid {
+            display: grid;
+            /* Auto-fill columns: min 250px wide, max 1 fraction of space */
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .address-card {
+            border: 1px solid #000;
+            padding: 15px;
+            background-color: #fff;
+            /* Flex column to push content apart if needed */
+            display: flex;
+            flex-direction: column;
+        }
+
+        .address-card h4 {
+            margin: 0 0 10px 0;
+            font-size: 16px;
+            font-weight: bold;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 5px;
+        }
+
+        .address-card p {
+            font-size: 13px;
+            margin-bottom: 5px;
+            color: #444;
+            flex-grow: 1; /* Pushes links to the bottom */
+        }
+
+        .address-card a {
+            font-size: 13px;
+            margin-top: 3px;
+            display: inline-block;
+        }
+    </style>
 </head>
+<body>
 
+    <div class="container">
 
-<title>Ruthvik Venkatesan</title>
+        <header>
+            <img src="me.png" alt="Ruthvik Venkatesan" class="profile-pic">
 
+            <h1>Ruthvik Venkatesan</h1>
+            <div class="header-contact">
+                <a href="mailto:ruthvikotravenkatesan@gmail.com">ruthvikotravenkatesan@gmail.com</a> |
+                <a href="https://linkedin.com/in/ruthvikvenkatesan">LinkedIn</a> |
+                <a href="https://github.com/Cylinders">GitHub</a>
+            </div>
 
+            <p style="text-align: center; font-style: italic;">
+                Full-ride Undergraduate Electrical Engineering Student on the PhD Track<br>
+                Theoretical CS, Robotics, Medical Electronics
+            </p>
+        </header>
 
+        <section>
+            <h2>Education</h2>
+            <div class="job-header">
+                <span class="dates">Sept 2025 - May 2028</span>
+                <h3>New Jersey Institute of Technology</h3>
+                <p class="sub-title">Albert Dorman Honors College | B.S. Electrical Engineering (GPA: 4.0/4.0)</p>
+            </div>
+        </section>
 
-<div id="mainpage" class = " text-xl mt-4 font-serif">
-    <a href="index.html" class = "text-xl py-2 ml-8">Ruthvik Venkatesan</a> </br>
-    <!--<div class = "ml-8 px-2 py-2">|</div>-->
+        <section>
+            <h2>Experience</h2>
 
+            <div class="job-header">
+                <img src="njit.png" alt="NJIT Logo" class="logo-img">
 
-    </br>
-    <img src="me.png" class = "w-[250px] rounded-lg ml-8">
-    </br>
-    <a href = "https://en.wikipedia.org/wiki/Academy_for_Mathematics,_Science,_and_Engineering" target="_blank" class = "mx-auto underline ml-8">AMSE'25</a>
-    <h2 class = "ml-8 text-lg">SAT: 1550 (99th Percentile)</h2>
-    <h2 class = "ml-8 text-lg">Software Development Intern</h2>
-    <h2 class = "ml-8 text-lg">Aspiring Computer Scientist</h2>
-    <a class = "ml-8 underline text-lg" href="https://github.com/Cylinders">Github: Cylinders</a> </br>
-    <a class = "ml-8 underline text-lg" href="https://linkedin.com/in/ruthvikvenkatesan">Linkedin</a> </br>
-    <a class = "ml-8 text-lg" href="mailto:ruthvikotravenkatesan@gmail.com">ruthvikotravenkatesan@gmail.com</a> </br>
-    <h2 class = "ml-8 text-lg">+1(862)-340-0888</h2>
-    </br>
-        <a href="projects.html" class = "w-[200px] ml-8 my-4 border-2 border-[#000000] px-2 py-2">Projects</a> </br> </br>
-        <a href="professional.html" class = "w-[200px] ml-8 my-4 border-2 border-[#000000] px-2 py-2">Professional</a> </br> </br>
-        <a href="academic.html" class = "w-[200px] ml-8 my-4 border-2 border-[#000000] px-2 py-2">Academics</a> </br> </br>
-        <a href="addressbook.html" class = "w-[200px] ml-8 my-4 border-2 border-[#000000] px-2 py-2">My Address Book</a> </br> </br>
+                <span class="dates">Sept 2025 -- Dec 2025</span>
+                <h3>Research Assistant</h3>
+                <p class="sub-title">New Jersey Institute of Technology | Newark, NJ</p>
+            </div>
+            <ul>
+                <li>Built and validated signal-processing pipelines for Doppler-based velocity imaging in an NIH-funded optical coherence tomography (OCT) lab.</li>
+                <li>Modeled Doppler frequency precision and system limits using MATLAB, translating theory into experimentally actionable insights.</li>
+            </ul>
 
-    <div class="flex flex-wrap flex-row">
-        <!--<a href="goals.html" class = "w-[200px] mx-auto my-4 border-2 border-[#00FF00] px-2 py-2">Goals</a>-->
-<!--         <a href="message.html" class = "w-[200px] mx-auto my-4 border-2 border-[#00FF00] px-2 py-2">Athletics</a> -->
-<!--         <a href="message.html" class = "w-[200px] mx-auto my-4 border-2 border-[#00FF00] px-2 py-2">Hobbies</a> -->
-<!--         <a href="message.html" class = "w-[200px] mx-auto my-4 border-2 border-[#00FF00] px-2 py-2">Misc.</a> -->
+            <hr style="border: 0; border-top: 1px solid #eee; margin: 15px 0;">
+
+            <div class="job-header">
+                <img src="dimacs.png" alt="Rutgers Logo" class="logo-img">
+
+                <span class="dates">Sept 2024 -- Present</span>
+                <h3>Research Assistant</h3>
+                <p class="sub-title">Rutgers University | Remote</p>
+            </div>
+            <ul>
+                <li>Designed provably fair allocation algorithms with scalability constraints alongside a Rutgers postdoctoral fellow.</li>
+                <li>Paper in progress on envy-free lottery-based cake-cutting mechanisms, emphasizing provable fairness and scalability.</li>
+            </ul>
+
+            <hr style="border: 0; border-top: 1px solid #eee; margin: 15px 0;">
+
+            <div class="job-header">
+                <img src="redpanda.png" alt="Red Panda Logo" class="logo-img">
+
+                <span class="dates">Jan 2024 -- Sept 2024</span>
+                <h3>Junior Software Developer</h3>
+                <p class="sub-title">Red Panda Fencing | Rockaway, NJ</p>
+            </div>
+            <ul>
+                <li>Shipped a real-time scoring platform used by 50+ competitive fencing teams, supporting live match operations.</li>
+                <li>Built and deployed a responsive web and mobile application using React and Firebase for a fast-moving startup environment.</li>
+            </ul>
+
+            <hr style="border: 0; border-top: 1px solid #eee; margin: 15px 0;">
+
+            <div class="job-header">
+                <img src="njit.png" alt="TA Logo" class="logo-img">
+
+                <span class="dates">Jan 2026 -- Present</span>
+                <h3>Teaching Assistant: ECE 251</h3>
+                <p class="sub-title">New Jersey Institute of Technology | Newark, NJ</p>
+            </div>
+            <ul>
+                <li>Facilitated laboratory sessions for Digital Logic Design, mentoring students on circuit debugging, Boolean algebra, and Karnaugh maps.</li>
+                <li>Assisted in grading assignments and exams, providing technical feedback on Verilog code and logic circuit diagrams.</li>
+            </ul>
+
+            <hr style="border: 0; border-top: 1px solid #eee; margin: 15px 0;">
+
+            <div class="job-header">
+                <img src="njit.png" alt="Student Rep Logo" class="logo-img">
+
+                <span class="dates">Sept 2025 -- May 2026</span>
+                <h3>First-Year Electrical Engineering Representative</h3>
+                <p class="sub-title">NJIT Student Advisory Board | Newark, NJ</p>
+            </div>
+            <ul>
+                <li>Elected to represent the freshman Electrical Engineering cohort, serving as the primary liaison between students and faculty administration.</li>
+                <li>Organized academic workshops and social events to foster community and address curriculum concerns for incoming engineering students.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Projects</h2>
+
+            <h3>Mesh-Based RF Communication Network</h3>
+            <p class="sub-title">Embedded Systems, RF | Oct 2024 -- Present</p>
+
+            <img src="interspace.jpeg" alt="RF Mesh Project" class="project-img">
+
+            <ul>
+                <li>Designed a modular, scalable RF mesh network focused on low-cost positioning and communication.</li>
+                <li>Implemented RSSI-based custom geopositioning using the Friis Transmission Formula, achieving ±6 ft accuracy.</li>
+                <li>Developed a custom USB serial API and GUI to enable seamless integration with external software and Raspberry Pi modules.</li>
+
+		<li>Presented project to 200+ people at engineering showcase.</li>
+            </ul>
+
+            <h3>LLM-Powered Voice Interface</h3>
+            <p class="sub-title">LLMs, Computer Vision | April 2024</p>
+
+            <img src="voicepilotmainscreen.png" alt="Voice Interface Project" class="project-img">
+
+            <ul>
+                <li>Built a speech-driven OS control system using NLP and speech-to-text, enabling hands-free computer interaction.</li>
+                <li>Integrated computer vision-based facial tracking for mouse control to improve accessibility.</li>
+                <li>Earned 1st Place (Healthcare) and State 3rd Place at a competitive hackathon.</li>
+            </ul>
+
+            <h3>Serverless Cloud-Hosted Chat Application</h3>
+            <p class="sub-title">Python, Angular.js, AWS | Oct 2023 -- Dec 2023</p>
+
+            <img src="countonme.png" alt="CountOnMe Project" class="project-img">
+
+            <ul>
+                <li>Developed a scalable group chat application using Angular.js for the frontend and AWS Serverless for the backend.</li>
+                <li>Engineered a custom file-based database architecture using AWS S3 and Lambda to efficiently parse and store chat history.</li>
+                <li>Submitted to the Congressional App Challenge.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Publications</h2>
+            <p>
+                <strong>Second Author</strong>, <em>Computational protein design: Advancing biotechnology through in silico engineering.</em><br>
+                <a href="https://doi.org/10.1016/j.pbiomolbio.2025.07.003">doi.org/10.1016/j.pbiomolbio.2025.07.003</a>
+            </p>
+        </section>
+
+        <section>
+            <h2>Technical Skills</h2>
+            <p><strong>Languages:</strong> Python, C, C++, MATLAB, Java</p>
+            <p><strong>Hardware:</strong> Microcontrollers (Arduino, Pi), Embedded Systems, PCB Design</p>
+            <p><strong>Tools:</strong> Git, AWS, Linux, Vim, LaTeX, KiCad, Fusion360</p>
+        </section>
+
+        <section>
+            <h2>Personal Interests</h2>
+            <p>Outside of my technical work, I shoot photos and play the flute.</p>
+            </section>
+
+        <section>
+            <h2>Address Book</h2>
+            <div class="address-book-grid">
+
+                <div class="address-card">
+                    <h4>Ruthvik Venkatesan</h4>
+                    <p>Me!</p>
+                    <a href="https://linkedin.com/in/ruthvikvenkatesan">LinkedIn</a>
+                    <a href="mailto:ruthvikotravenkatesan@gmail.com">ruthvikotravenkatesan@gmail.com</a>
+                </div>
+
+                <div class="address-card">
+                    <h4>Vihas Veggalam</h4>
+                    <p>Student at the Academy for Mathematics, Science, and Engineering.</p>
+                    <a href="https://vihasveggalam.vercel.app">Check out his site</a>
+                    <a href="mailto:vihas.veggalam@gmail.com">vihas.veggalam@gmail.com</a>
+                </div>
+
+                <div class="address-card">
+                    <h4>Alan Qu</h4>
+                    <p>Student at the Academy for Mathematics, Science, and Engineering.</p>
+                    <a href="https://www.linkedin.com/in/alan-qu-8018812b6/">LinkedIn</a>
+                    <a href="mailto:originalan@gmail.com">originalan@gmail.com</a>
+                </div>
+
+                <div class="address-card">
+                    <h4>Shreyas Angadi</h4>
+                    <p>Student at the Academy for Mathematics, Science, and Engineering.</p>
+                    <a href="mailto:shreyas.n.angadi@gmail.com">shreyas.n.angadi@gmail.com</a>
+                </div>
+
+                <div class="address-card">
+                    <h4>Mr. Brian Hamilton</h4>
+                    <p>Teacher of Engineering at Morris Hills High School. My Self-study mentor for Automotive Engineering. Thank You!</p>
+                    <a href="mailto:bhamilton@mhrd.org">bhamilton@mhrd.org</a>
+                </div>
+
+                <div class="address-card">
+                    <h4>Mrs. Amy Skutnik</h4>
+                    <p>Teacher of Mathematics at Morris Hills High School. My Self-study mentor for Theoretical Computer Science. Thank You!</p>
+                    <a href="mailto:askutnik@mhrd.org">askutnik@mhrd.org</a>
+                </div>
+
+                <div class="address-card">
+                    <h4>Mr. Sean Trisler</h4>
+                    <p>Teacher of Engineering at Morris Hills High School.</p>
+                    <a href="mailto:strisler@mhrd.org">strisler@mhrd.org</a>
+                    <a href="https://makerlessons.com">Visit MakerLessons!</a>
+                </div>
+
+                <div class="address-card">
+                    <h4>Mr. Venkatesan Otra</h4>
+                    <p>Hi Dad!</p>
+                    <a href="mailto:ogvenkat@gmail.com">ogvenkat@gmail.com</a>
+                </div>
+
+                <div class="address-card">
+                    <h4>Dr. Daniel Schoepflin</h4>
+                    <p>Professor of CS at Rutgers University--New Brunswick. Professor I interned under at Rutgers.</p>
+                    <a href="https://danschoepflin.github.io/">Check out his website!</a>
+                </div>
+
+                <div class="address-card">
+                    <h4>Mr. Michael Bermel</h4>
+                    <p>Teacher of Mathematics at Morris Hills High School.</p>
+                    <a href="http://www.mrbermel.com">Visit MrBermel.com for great calculus!</a>
+                </div>
+
+            </div>
+        </section>
+
     </div>
-</div>
 
+</body>
 </html>
