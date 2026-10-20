@@ -2,16 +2,16 @@
 layout: about
 title: about
 permalink: /
-subtitle: <a href='#'>Affiliations</a>. Address. Contacts. Motto. Etc.
+subtitle: Researcher in Multi-Agent Robotics & AI | Aspiring Ph.D. Candidate
 
 profile:
   align: right
   image: prof_pic.jpg
   image_circular: false # crops the image to make it circular
   more_info: >
-    <p>No Office Phone</p>
-    <p>NJIT, Newark, New Jersey</p>
-    <p>Prosper, Texas</p>
+    <p>New Jersey Institute of Technology</p>
+    <p>Newark, New Jersey</p>
+    <p>Greater NYC Metropolitan Area + Dallas-Fort Worth Metropolitan Area</p>
 
 selected_papers: true # includes a list of papers marked as "selected={true}"
 social: true # includes social icons at the bottom of the page
@@ -27,6 +27,11 @@ latest_posts:
   limit: 3 # leave blank to include all the blog posts
 ---
 
-Hello! My name is Ruthvik Venkatesan. I do research on multi-agent robotic systems, AI, and am aiming for an entrance to a PhD program in Fall 2029. Feel free to check out my linkedin at [linkedin link](https://www.linkedin.com/in/ruthvikvenkatesan). 
+Hello! My name is Ruthvik Venkatesan. I am a researcher specializing in **multi-agent robotic systems** and **Artificial Intelligence**. I am currently building my research background with the goal of entering a Ph.D. program in the Fall of 2029.
 
-This portfolio website is still in progress. Check out my linkedin instead for the time being. 
+My academic and research interests lie at the intersection of robotics and AI, focusing on how intelligent agents interact, coordinate, and solve complex problems. 
+
+*Please note: This portfolio website is currently under development. In the meantime, please feel free to connect with me or view my complete professional background on [LinkedIn](https://www.linkedin.com/in/ruthvikvenkatesan).*
+
+
+
